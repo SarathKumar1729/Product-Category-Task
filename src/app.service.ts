@@ -70,7 +70,7 @@ export class AppService {
     
     
     if (filteredproducts.length === 0) {
-      throw new HttpException('0 books found', HttpStatus.NOT_FOUND);
+      throw new HttpException('0 product found', HttpStatus.NOT_FOUND);
     }
     return filteredproducts;
   }
@@ -115,7 +115,7 @@ export class AppService {
        .orderBy(sort);
        const sortproducts = await query1.getMany();
        if (sortproducts.length === 0) {
-        throw new HttpException('0 books found', HttpStatus.NOT_FOUND);
+        throw new HttpException('0 Product found', HttpStatus.NOT_FOUND);
       }
       return sortproducts;
     }
